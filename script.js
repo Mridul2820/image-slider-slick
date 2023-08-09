@@ -1,7 +1,7 @@
 $(document).ready(function () {
   $(".slider1").slick({
     autoplay: true,
-    arrows: true,
+    arrows: false,
     slidesToShow: 3,
     slidesToScroll: 1,
     prevArrow: $(".arrow-prev1"),
@@ -11,6 +11,7 @@ $(document).ready(function () {
         breakpoint: 480,
         settings: {
           slidesToShow: 1,
+          arrows: true,
         },
       },
       {
@@ -38,7 +39,7 @@ $(document).ready(function () {
 $(document).ready(function () {
   $(".slider2").slick({
     autoplay: true,
-    arrows: true,
+    arrows: false,
     slidesToShow: 3,
     slidesToScroll: 1,
     prevArrow: $(".arrow-prev2"),
@@ -48,6 +49,7 @@ $(document).ready(function () {
         breakpoint: 480,
         settings: {
           slidesToShow: 1,
+          arrows: true,
         },
       },
       {

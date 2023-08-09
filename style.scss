@@ -6,10 +6,6 @@ $dark: #212121;
 $darkest: #121212;
 $green: #1cff65;
 $maxwidth: 1200px;
-$colsBigDesktop: 4;
-$colsSmallDesktop: 3;
-$colsTablet: 2;
-$colsMobile: 1;
 
 * {
   margin: 0;
@@ -26,10 +22,12 @@ body {
   font-family: "Belleza";
   font-size: 38px;
   font-weight: 400;
-  margin-bottom: 2rem;
-  margin-top: 2rem;
   text-transform: uppercase;
   text-align: center;
+
+  @media only screen and (max-width: 480px) {
+    font-size: 32px;
+  }
 }
 
 * {
@@ -40,6 +38,10 @@ body {
   /* Webkit */
   width: 0;
   height: 0;
+}
+
+.slider-item {
+  margin: 40px 0;
 }
 
 .slider1,
@@ -74,22 +76,14 @@ body {
       text-transform: uppercase;
       border-radius: 999px;
       cursor: pointer;
+      display: none;
+      align-self: center;
+
+      @media only screen and (max-width: 480px) {
+        display: flex;
+      }
     }
-    .arrow-prev {
-      position: absolute;
-      left: 36px;
-      top: 30%;
-      z-index: 10;
-      transform: translateY(-50%);
-    }
-    .arrow-next {
-      position: absolute;
-      right: 36px;
-      top: 30%;
-      z-index: 10;
-      transform: translateY(-50%);
-    }
-    align-self: center;
+
     .arrow {
       &:before {
         content: "";
@@ -117,6 +111,38 @@ body {
 
   &__wrapper {
     overflow: hidden;
+  }
+}
+
+.slider1__wrapper {
+  .arrow {
+    position: absolute;
+    top: 35%;
+    z-index: 10;
+    transform: translateY(-50%);
+  }
+
+  .arrow-prev {
+    left: 36px;
+  }
+  .arrow-next {
+    right: 36px;
+  }
+}
+
+.slider2__wrapper {
+  .arrow {
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+    transform: translateY(-50%);
+  }
+
+  .arrow-prev {
+    left: 36px;
+  }
+  .arrow-next {
+    right: 36px;
   }
 }
 
@@ -192,8 +218,8 @@ body {
       z-index: 1;
       margin: 10px 0;
       position: absolute;
-      bottom: 16px;
-      left: 32px;
+      bottom: 8px;
+      left: 16px;
     }
 
     &__button {
@@ -254,9 +280,4 @@ body {
 ul {
   padding: 0;
   margin: 0;
-}
-
-.slider1,
-.slider2 {
-  height: 100vh;
 }

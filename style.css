@@ -15,10 +15,13 @@ body {
   font-family: "Belleza";
   font-size: 38px;
   font-weight: 400;
-  margin-bottom: 2rem;
-  margin-top: 2rem;
   text-transform: uppercase;
   text-align: center;
+}
+@media only screen and (max-width: 480px) {
+  .section-heading {
+    font-size: 32px;
+  }
 }
 
 * {
@@ -30,6 +33,10 @@ body {
   /* Webkit */
   width: 0;
   height: 0;
+}
+
+.slider-item {
+  margin: 40px 0;
 }
 
 .slider1,
@@ -62,11 +69,6 @@ body {
       -ms-flex: 1;
           flex: 1;
 }
-.slider1__arrows,
-.slider2__arrows {
-  -ms-flex-item-align: center;
-      align-self: center;
-}
 .slider1__arrows .arrow,
 .slider2__arrows .arrow {
   background-color: #ffffff !important;
@@ -88,24 +90,17 @@ body {
   text-transform: uppercase;
   border-radius: 999px;
   cursor: pointer;
+  display: none;
+  -ms-flex-item-align: center;
+      align-self: center;
 }
-.slider1__arrows .arrow-prev,
-.slider2__arrows .arrow-prev {
-  position: absolute;
-  left: 36px;
-  top: 30%;
-  z-index: 10;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-}
-.slider1__arrows .arrow-next,
-.slider2__arrows .arrow-next {
-  position: absolute;
-  right: 36px;
-  top: 30%;
-  z-index: 10;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+@media only screen and (max-width: 480px) {
+  .slider1__arrows .arrow,
+  .slider2__arrows .arrow {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 .slider1__arrows .arrow:before,
 .slider2__arrows .arrow:before {
@@ -137,6 +132,34 @@ body {
 .slider1__wrapper,
 .slider2__wrapper {
   overflow: hidden;
+}
+
+.slider1__wrapper .arrow {
+  position: absolute;
+  top: 35%;
+  z-index: 10;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+.slider1__wrapper .arrow-prev {
+  left: 36px;
+}
+.slider1__wrapper .arrow-next {
+  right: 36px;
+}
+
+.slider2__wrapper .arrow {
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+.slider2__wrapper .arrow-prev {
+  left: 36px;
+}
+.slider2__wrapper .arrow-next {
+  right: 36px;
 }
 
 .slider1__item {
@@ -224,8 +247,8 @@ body {
   z-index: 1;
   margin: 10px 0;
   position: absolute;
-  bottom: 16px;
-  left: 32px;
+  bottom: 8px;
+  left: 16px;
 }
 .slider2__item__button {
   background-color: #ffffff !important;
@@ -285,9 +308,4 @@ body {
 ul {
   padding: 0;
   margin: 0;
-}
-
-.slider1,
-.slider2 {
-  height: 100vh;
 }
