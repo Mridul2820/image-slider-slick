@@ -5,7 +5,7 @@ $bg: white;
 $dark: #212121;
 $darkest: #121212;
 $green: #1cff65;
-$maxwidth: 1200px;
+$maxwidth: 1400px;
 
 * {
   margin: 0;
@@ -260,7 +260,7 @@ body {
   margin: 0 auto;
   mix-blend-mode: invert;
   position: relative;
-  padding: calc(#{$gutter} * 4) calc(#{$gutter} * 8);
+  padding: calc(#{$gutter} * 3) calc(#{$gutter} * 6);
 
   &:after {
     content: "";

@@ -282,11 +282,11 @@ body {
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
   mix-blend-mode: invert;
   position: relative;
-  padding: calc(10px * 4) calc(10px * 8);
+  padding: calc(10px * 3) calc(10px * 6);
 }
 .container:after {
   content: "";
