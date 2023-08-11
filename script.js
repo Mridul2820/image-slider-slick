@@ -40,7 +40,7 @@ $(document).ready(function () {
   $(".slider2").slick({
     autoplay: true,
     arrows: false,
-    slidesToShow: 4,
+    slidesToShow: 3,
     slidesToScroll: 1,
     prevArrow: $(".arrow-prev2"),
     nextArrow: $(".arrow-next2"),
@@ -67,7 +67,7 @@ $(document).ready(function () {
       {
         breakpoint: 1280,
         settings: {
-          slidesToShow: 4,
+          slidesToShow: 3,
         },
       },
     ],
