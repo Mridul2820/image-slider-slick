@@ -1,6 +1,6 @@
 $(document).ready(function () {
   $(".slider1").slick({
-    autoplay: true,
+    autoplay: false,
     arrows: false,
     slidesToShow: 3,
     slidesToScroll: 1,
@@ -38,7 +38,7 @@ $(document).ready(function () {
 
 $(document).ready(function () {
   $(".slider2").slick({
-    autoplay: true,
+    autoplay: false,
     arrows: false,
     slidesToShow: 3,
     slidesToScroll: 1,
